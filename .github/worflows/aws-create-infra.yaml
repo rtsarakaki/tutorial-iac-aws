@@ -1,0 +1,15 @@
+name: Sync Infra Structure (IAC)
+
+on:
+    - pull_request
+
+jobs:
+    cloudformation-linter:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Linter install
+              run: pip install cfn-lint
+            - name: Lint CloudFormation
+              run: cfn-lint -t templates/*.yaml
