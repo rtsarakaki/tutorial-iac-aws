@@ -3,6 +3,9 @@ name: Sync Infra Structure (IAC)
 on:
     - pull_request
 
+branches:
+    - main
+
 jobs:
     cloudformation-linter:
         runs-on: ubuntu-latest
