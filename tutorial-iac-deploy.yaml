@@ -1,0 +1,4 @@
+template-file-path: ./create-s3-with-cloudformation.yaml
+  tags:
+    Name: "github-integration"
+    Project: "Tutorial IAC"
